@@ -1,0 +1,36 @@
+# ══════════════════════════════════════════════════════
+#  .gitignore —— 告诉 Git「哪些东西不要管」
+#  判断规律：能重新生成的 / 每台机器都不同的 → 写在这里
+# ══════════════════════════════════════════════════════
+
+# ── 1. UE 的编译产物与缓存（几百 MB ~ 几 GB，全都能重新生成）──
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+Build/
+
+# ── 2. IDE / 编辑器配置（每个人本地不一样，没必要同步）──
+.vs/
+.vscode/
+.idea/
+
+# ── 3. Visual Studio 的中间文件 ──
+*.sln
+*.suo
+*.user
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+
+# ── 4. 杂项 ──
+*.log
+*.tmp
+
+# ── 5. 第三方素材包（314MB，可再获取；来源记录见 THIRD_PARTY.md）──
+# ⚠️ 后果：本仓库不跟踪它 → 你对它的修改不会被 Git 记录，改坏了也救不回来。
+#    要改就「派生」到 Content/Code/ 下（材质实例 / 子蓝图）；
+#    确实需要跟踪个别文件时，强制加入：
+#        git add -f "Content/XL_FPSPack/某个文件.uasset"
+Content/XL_FPSPack/
