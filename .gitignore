@@ -34,3 +34,13 @@ Build/
 #    确实需要跟踪个别文件时，强制加入：
 #        git add -f "Content/XL_FPSPack/某个文件.uasset"
 Content/XL_FPSPack/
+
+# ── 6. 射击特效素材包（46MB，可再获取；来源记录见 THIRD_PARTY.md）──
+# 内容：Shot_VFX（开火特效 38MB，含 VIRTUS_MuzzleFlash 枪口火焰 / 弹着点 FX_Squib*）
+#       Shot_SFX（开火音效 6MB）/ StaticMesh（1.6MB）
+# 来源：InfimaGames「ArtCore」系列
+# ⚠️ 后果：本仓库不跟踪它 → 你对它的修改不会被 Git 记录，改坏了也救不回来。
+#    要改就「派生」到 Content/Code/ 下（材质实例 / 子蓝图）；
+#    确实需要跟踪个别文件时，强制加入：
+#        git add -f "Content/ShotSystem/某个文件.uasset"
+Content/ShotSystem/
